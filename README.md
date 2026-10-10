@@ -51,27 +51,6 @@ Análisis del renderizado del lado del cliente (CSR).
 Nota: los indicadores del dashboard son datos de ejemplo y no proceden de una base de datos.
 
 4. Arquitectura del proyecto
-
-practica_semana5-daw/
-├── public/
-├── src/
-│ ├── components/
-│ │ ├── Dashboard.jsx
-│ │ └── MetricCard.jsx
-│ ├── styles/
-│ │ └── MetricCard.module.css
-│ ├── App.jsx
-│ ├── App.css
-│ ├── index.css
-│ └── main.jsx
-├── index.html
-├── package.json
-├── package-lock.json
-├── vite.config.js
-└── README.md
-
-La estructura representa los archivos principales previstos para la aplicación. Los archivos que no se utilicen o que hayan sido eliminados durante la limpieza del proyecto no necesitan volver a crearse.
-
 Descripción de los componentes
 
 App.jsx: componente raíz que organiza la aplicación y presenta el dashboard.
