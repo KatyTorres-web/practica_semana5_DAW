@@ -7,11 +7,7 @@ import {
   faTruck,
 } from "@fortawesome/free-solid-svg-icons";
 
-/**
- * Organiza y presenta las métricas principales de la florería.
- *
- * @returns {JSX.Element} Panel principal del dashboard.
- */
+
 function Dashboard() {
   return (
     <div className="dashboard">
@@ -98,8 +94,13 @@ function Dashboard() {
           </p>
         </div>
       </section>
+      <footer className="dashboard-footer">
+        <span>© 2026 Petal & Bloom</span>
+        <span>TORRES AMBROSIO KATHERINE MEDALLY</span>
+      </footer>
     </div>
   );
+  
 }
 
 export default Dashboard;

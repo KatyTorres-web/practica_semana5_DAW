@@ -183,3 +183,21 @@ textarea {
     align-items: flex-start;
   }
 }
+.dashboard-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-top: 28px;
+  padding: 18px 4px;
+  border-top: 1px solid #e6ded5;
+  color: #8b8080;
+  font-size: 0.78rem;
+}
+
+@media (max-width: 480px) {
+  .dashboard-footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
