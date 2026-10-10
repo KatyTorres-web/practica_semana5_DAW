@@ -1,3 +1,7 @@
+/* ========================================
+   ESTILOS GLOBALES
+   ======================================== */
+
 * {
   box-sizing: border-box;
 }
@@ -25,13 +29,21 @@ textarea {
 
 #root {
   width: 100%;
+  min-height: 100vh;
 }
 
+/* ========================================
+   DASHBOARD
+   ======================================== */
+
 .dashboard {
-  width: min(1120px, 92%);
-  margin: 0 auto;
-  padding: 48px 0;
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 36px 5%;
 }
+
+/* Encabezado */
 
 .dashboard-header {
   display: flex;
@@ -67,6 +79,8 @@ textarea {
   line-height: 1.7;
 }
 
+/* Decoración floral */
+
 .dashboard-decoration {
   display: flex;
   align-items: center;
@@ -79,6 +93,10 @@ textarea {
   color: #8b9d7e;
   font-size: 4rem;
 }
+
+/* ========================================
+   SECCIÓN DE MÉTRICAS
+   ======================================== */
 
 .dashboard-section {
   margin-top: 38px;
@@ -95,73 +113,17 @@ textarea {
   margin-top: 0;
 }
 
+/* Distribución de las tarjetas */
+
 .metric-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 24px;
 }
 
-.metric-card {
-  padding: 24px;
-  background: #fffefa;
-  border: 1px solid #ece5dd;
-  border-radius: 22px;
-  box-shadow: 0 8px 24px rgb(80 65 60 / 5%);
-}
-
-.metric-card-header {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-.metric-icon {
-  display: grid;
-  width: 44px;
-  height: 44px;
-  place-items: center;
-  border-radius: 15px;
-  font-size: 1.2rem;
-}
-
-.tone-sage .metric-icon {
-  color: #58745a;
-  background: #e6eddf;
-}
-
-.tone-lavender .metric-icon {
-  color: #78618e;
-  background: #ede7f6;
-}
-
-.tone-rose .metric-icon {
-  color: #a05e78;
-  background: #f7e8eb;
-}
-
-.tone-peach .metric-icon {
-  color: #9b7049;
-  background: #f8eadc;
-}
-
-.metric-label {
-  color: #756a69;
-  font-size: 0.95rem;
-  font-weight: 600;
-}
-
-.metric-value {
-  margin: 22px 0 8px;
-  color: #594653;
-  font-size: 2.4rem;
-  font-weight: 800;
-}
-
-.metric-note {
-  color: #8b8080;
-  font-size: 0.9rem;
-  line-height: 1.6;
-}
+/* ========================================
+   MENSAJE DE BIENVENIDA
+   ======================================== */
 
 .welcome-note {
   display: flex;
@@ -186,9 +148,23 @@ textarea {
   margin-bottom: 0;
 }
 
+/* ========================================
+   DISEÑO RESPONSIVE
+   ======================================== */
+
+/* Tablets y pantallas medianas */
+
+@media (max-width: 1000px) {
+  .metric-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* Teléfonos */
+
 @media (max-width: 600px) {
   .dashboard {
-    padding: 24px 0;
+    padding: 24px 5%;
   }
 
   .dashboard-header {

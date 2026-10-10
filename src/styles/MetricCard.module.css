@@ -1,0 +1,129 @@
+.metricCard {
+  position: relative;
+  min-width: 0;
+  overflow: hidden;
+  padding: 26px;
+  background: #fffefa;
+  border: 1px solid #ece5dd;
+  border-radius: 24px;
+  box-shadow: 0 8px 24px rgb(80 65 60 / 5%);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+/* Acento decorativo superior */
+
+.metricCard::before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 5px;
+  content: "";
+  background: var(--card-accent, #8b9d7e);
+}
+
+/* Interacción visual */
+
+.metricCard:hover {
+  transform: translateY(-6px);
+  border-color: var(--card-accent, #8b9d7e);
+  box-shadow: 0 16px 32px rgb(80 65 60 / 12%);
+}
+
+/* Cabecera e icono */
+
+.metricCardHeader {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+
+.metricIcon {
+  display: grid;
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  place-items: center;
+  border-radius: 17px;
+  font-size: 1.25rem;
+  transition: transform 0.25s ease;
+}
+
+.metricCard:hover .metricIcon {
+  transform: rotate(-8deg) scale(1.08);
+}
+
+.metricLabel {
+  color: #756a69;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.metricValue {
+  margin: 24px 0 8px;
+  color: #594653;
+  font-size: clamp(2rem, 3vw, 2.7rem);
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+.metricDetails {
+  color: #8b8080;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+/* Variantes florales */
+
+.toneSage {
+  --card-accent: #8b9d7e;
+}
+
+.toneSage .metricIcon {
+  color: #58745a;
+  background: #e6eddf;
+}
+
+.toneLavender {
+  --card-accent: #a995c4;
+}
+
+.toneLavender .metricIcon {
+  color: #78618e;
+  background: #ede7f6;
+}
+
+.toneRose {
+  --card-accent: #d69aaf;
+}
+
+.toneRose .metricIcon {
+  color: #a05e78;
+  background: #f7e8eb;
+}
+
+.tonePeach {
+  --card-accent: #d8ad7d;
+}
+
+.tonePeach .metricIcon {
+  color: #9b7049;
+  background: #f8eadc;
+}
+
+/* Accesibilidad: respeta la preferencia de movimiento */
+
+@media (prefers-reduced-motion: reduce) {
+  .metricCard,
+  .metricIcon {
+    transition: none;
+  }
+
+  .metricCard:hover,
+  .metricCard:hover .metricIcon {
+    transform: none;
+  }
+}
